@@ -212,16 +212,20 @@ a#menu__rojo {
   background-color: #ebebeb;
   padding: 2em 0em 3.5em 0;
 }
+.opciones img{
+  width: 70px;
+  height: 70px;
+}
 .opciones a {
   display: block;
   color: #000;
-
   text-decoration: none;
   margin-top: 1em;
 }
 .opciones:hover{
-    transition: 0.5s ease-in;
-    opacity: 0.7;
+    transition: 0.3s ease-in;
+    text-decoration: underline;
+    background-color: #ebebebaf;
 }
 /* Seccion de Videos */
 .container__videos {
