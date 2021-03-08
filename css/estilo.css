@@ -101,14 +101,14 @@ a#menu__rojo {
 .carousel__lista3 {
   overflow: hidden;
 }
-.carousel__contenedor p {
+.container p {
   background: #f6f3f2;
   padding: 3em 0;
   color: #5f5f5f;
   font-size: 11px;
   text-align: center;
 }
-.carousel__contenedor p i {
+.container p i {
   background: #5f5f5f;
   color: #fff;
   border-radius: 50%;
@@ -212,7 +212,7 @@ a#menu__rojo {
   background-color: #ebebeb;
   padding: 2em 0em 3.5em 0;
 }
-.opciones img{
+.opciones img {
   width: 70px;
   height: 70px;
 }
@@ -222,10 +222,10 @@ a#menu__rojo {
   text-decoration: none;
   margin-top: 1em;
 }
-.opciones:hover{
-    transition: 0.3s ease-in;
-    text-decoration: underline;
-    background-color: #ebebebaf;
+.opciones:hover {
+  transition: 0.3s ease-in;
+  text-decoration: underline;
+  background-color: #ebebebaf;
 }
 /* Seccion de Videos */
 .container__videos {
@@ -344,7 +344,7 @@ a#menu__rojo {
 /* Seccion Footer */
 .container__footer {
   background-color: #141414;
-  padding: 5em 0;
+  padding: 5em 1.5em;
 }
 .footer {
   max-width: 1000px;
@@ -358,9 +358,12 @@ a#menu__rojo {
 }
 .autor img {
   padding-right: 1em;
+  max-width: 60px;
+  max-height:35px;
 }
 .links div {
   display: flex;
+  flex-wrap: wrap;
 }
 .links div a {
   padding: 0 0.5em;
@@ -368,6 +371,10 @@ a#menu__rojo {
   text-decoration: none;
   font-size: 0.8em;
   font-weight: bold;
+}
+.links div a:hover{
+  transition: 0.2s ease-in;
+  text-decoration:underline ;
 }
 .links p {
   padding-left: 0.5em;
@@ -379,6 +386,8 @@ a#menu__rojo {
 }
 
 .inconos {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 1.2em;
 }
 .inconos a i {
@@ -388,4 +397,142 @@ a#menu__rojo {
 .fa-youtube:before,
 .fa-twitter:before {
   padding-right: 1em;
+}
+
+/*--------Responsive----------------------*/
+@media screen and (max-width: 1160px) {
+  /* Tercera seccion */
+  .container__opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  /* Tercera seccion */
+  .container_parrafo_3 h3 {
+    font-size: 1.5em;
+  }
+  .container_parrafo_3 p {
+    font-size: 0.9em;
+  }
+  .container__opciones__principal {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .container__opciones {
+    gap: 1em;
+    padding: 2em;
+  }
+  /* Seccion Videos */
+  .lista__videos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lista__videos .video:nth-child(1) {
+    padding-bottom: 1em;
+  }
+  .lista__videos .video iframe {
+    width: 700px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+   /* Seccion Videos */
+  .lista__videos .video iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  /* Banner principal */
+  .container p{
+    font-size:0.6rem;
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem;
+    text-align: justify;
+  }
+  .carousel__anterior,
+.carousel__siguiente,
+.carousel__anterior2,
+.carousel__siguiente2,
+.carousel__anterior3,
+.carousel__siguiente3 {
+  font-size: 1.5rem;
+}
+  /* Seccion ultimos lanzamientos */
+  .titulo__carousel2,.titulo__carousel_3{
+    font-size:1.5em;
+  }
+  /* Tercera seccion */
+
+  .container__opciones {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+   /* Seccion Videos */
+  .lista__videos .video iframe {
+    width: 400px;
+    height: 200px;
+  }
+  /* Estilos Servicios */
+  .container__servicios {
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4, 260px);
+  }
+  /*--------- Footer----------------- */
+  .footer{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .autor{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .links div{
+    flex-direction: column;
+    align-items: center;
+    
+  } 
+  .links div a{
+    margin-top: 0.5em;
+    font-size: 0.7rem;
+  }
+  
+  .links div a.barra{
+    border: none;
+  }
+  .links p{
+    text-align: center;
+  }
+ 
+  .autor img,.autor .links,.links p{
+    margin-top: 1em;
+  }
+  
+}
+@media screen and (max-width: 370px) {
+  /* Seccion ultimos lanzamientos */
+  .titulo__carousel2,.titulo__carousel_3{
+    font-size:1.2em;
+  }
+  .carousel__elemento3 span{
+    font-size:0.7em;
+  }
+  .carousel__elemento3 h3,.carousel__elemento3 a{
+    font-size:0.8em;
+  }
+ 
+}
+@media screen and (max-width: 430px) {
+  
+   /* Seccion Videos */
+  .lista__videos .video iframe {
+    width: 300px;
+    height: 200px;
+  }
 }
